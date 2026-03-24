@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Book Recommender</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body class="texture-bg">
+  <div id="app" class="container">
+    <header class="main-header">
+      <h1 class="title">Mood Reads</h1>
+      <p class="subtitle">Tell us how you're feeling, and we'll find your next great read.</p>
+    </header>
+
+    <main class="mood-section">
+      <div id="mood-selector" class="mood-grid">
+        <!-- Mood Buttons will be dynamically inserted here -->
+      </div>
+    </main>
+
+    <section id="results" class="results-section">
+      <div id="book-grid" class="book-grid">
+        <!-- Book Cards will be dynamically inserted here -->
+        <p class="placeholder-text">Pick a mood to get started!</p>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <p>&copy; 2026 Mood Reads. Crafted with &hearts; for book lovers.</p>
+    </footer>
+  </div>
+
+  <script defer type="module" src="/main.js"></script>
+</body>
+</html>
