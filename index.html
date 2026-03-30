@@ -1,40 +1,56 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mood Book Recommender</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodBook - 오늘의 기분에 어울리는 책</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="texture-bg">
-  <div id="app" class="container">
-    <header class="main-header">
-      <h1 class="title">Mood Reads</h1>
-      <p class="subtitle">Tell us how you're feeling, and we'll find your next great read.</p>
-    </header>
+<body>
+    <div class="background-texture"></div>
+    <div class="container">
+        <header>
+            <h1>MoodBook Portal</h1>
+            <p class="subtitle">나의 독서 생활을 위한 첫 걸음</p>
+        </header>
 
-    <main class="mood-section">
-      <div id="mood-selector" class="mood-grid">
-        <!-- Mood Buttons will be dynamically inserted here -->
-      </div>
-    </main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="main-search" placeholder="책 제목, 저자 또는 키워드 검색..." autocomplete="off">
+                <div class="search-icon">🔍</div>
+            </div>
+        </section>
 
-    <section id="results" class="results-section">
-      <div id="book-grid" class="book-grid">
-        <!-- Book Cards will be dynamically inserted here -->
-        <p class="placeholder-text">Pick a mood to get started!</p>
-      </div>
-    </section>
+        <section class="shortcut-section">
+            <h2>빠른 가기</h2>
+            <div class="shortcut-grid" id="shortcut-grid">
+                <!-- Shortcuts will be injected here via JS -->
+            </div>
+        </section>
 
-    <footer class="main-footer">
-      <p>&copy; 2026 Mood Reads. Crafted with &hearts; for book lovers.</p>
-    </footer>
-  </div>
+        <section class="mood-section">
+            <h2>기분별 추천</h2>
+            <div class="mood-selector">
+                <button class="mood-btn" data-mood="happy">😊 행복함</button>
+                <button class="mood-btn" data-mood="sad">😢 위로가 필요함</button>
+                <button class="mood-btn" data-mood="adventurous">🚀 모험을 떠나고 싶음</button>
+                <button class="mood-btn" data-mood="calm">🧘‍♀️ 차분해지고 싶음</button>
+                <button class="mood-btn" data-mood="productive">🔥 열정적임</button>
+            </div>
+        </section>
 
-  <script defer type="module" src="/main.js"></script>
+        <main id="recommendation-area">
+            <!-- Recommendations will appear here -->
+        </main>
+
+        <footer>
+            <p>&copy; 2026 MoodBook Dashboard. 모든 지식의 문턱을 낮춥니다.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
